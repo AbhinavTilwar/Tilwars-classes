@@ -48,47 +48,44 @@
 // export default ImageTileContainer;
 import React from 'react';
 import './ImageTileContainer.css'; // Import CSS for styles
-import Industrial from './assets/img/Industrial.png';
-import Commercial from './assets/img/Commercial.png';
-import Residential from './assets/img/Residential.png';
-import VastuOnline from './assets/img/Online Vastu.png';
+import ExamPrep from './assets/img/PIC5.svg';
+import ConceptBuilding from './assets/img/PIC2.svg';
+import SkillDevelopment from './assets/img/PIC3.svg';
+import OnlineClasses from './assets/img/PIC1.svg';
 
-const VastuServices = () => {
+const CoachingServices = () => {
   return (
     <div className='about-section'>
-    <div className="containerr">
-      <h1>WHAT WE OFFER</h1>
-      <h2>Vastu Services</h2>
-      <p>Vastu is not a universal solution; it requires personalized approaches for different environments. Our experienced Vastu consultants
-are here to provide tailored strategies that align with your specific needs. Let us help you harmonize the energies of your
-surroundings to reach your objectives.</p>
+      <div className="containerr"s>
+        <h1>WHAT WE HELP</h1>
+        <h2>Our Educational Classes</h2>
+        <p>At Tilwar's Coaching Classes, we believe in a customized approach to each student's success. Our services are designed to address individual learning needs, whether it's mastering exam techniques, strengthening core concepts, or developing crucial skills for lifelong success.</p>
 
-      <div className="services">
-        <div className="service">
-          <img src={Residential} alt="Residential Vastu"/>
-          <h3>Residential Vastu</h3>
-          <p>From homes to apartments, we optimize energy flow to enhance health, relationships, and prosperity.</p>
-        </div>
-        <div className="service">
-          <img src={Commercial} alt="Commercial Vastu"/>
-          <h3>Commercial Vastu</h3>
-          <p>Enhance the energy of your Offices, Shops and Hospitals to increase productivity, efficiency, and success.</p>
-        </div>
-        
-        <div className="service">
-          <img src={Industrial} alt="Industrial Vastu"/>
-          <h3>Industrial Vastu</h3>
-          <p>Optimize the layout and design of your factory or manufacturing unit to improve efficiency, reduce costs, and increase productivity.</p>
-        </div>
-        <div className="service">
-          <img src={VastuOnline} alt="Online Vastu Consultation"/>
-          <h3>Online Vastu Consultation</h3>
-          <p>Enjoy personalized consultations online from the comfort of your home.</p>
+        <div className="services">
+          <div className="service">
+            <img src={ExamPrep} alt="Exam Preparation"/>
+            <h3>Exam Preparation</h3>
+            <p>Prepare for your exams with confidence through rigorous practice and effective strategies that boost scores and reduce stress.</p>
+          </div>
+          <div className="service">
+            <img src={ConceptBuilding} alt="Concept Building"/>
+            <h3>Concept Building</h3>
+            <p>Build a strong foundation in key subjects to ensure lasting understanding and a love for learning.</p>
+          </div>
+          <div className="service">
+            <img src={SkillDevelopment} alt="Skill Development"/>
+            <h3>Skill Development</h3>
+            <p>Develop essential skills such as time management, critical thinking, and problem-solving for academic and personal success.</p>
+          </div>
+          <div className="service">
+            <img src={OnlineClasses} alt="Online Classes"/>
+            <h3>Online Classes</h3>
+            <p>Enjoy the convenience of online learning with personalized guidance from expert instructors, accessible from anywhere.</p>
+          </div>
         </div>
       </div>
-    </div>
     </div>
   );
 }
 
-export default VastuServices;
+export default CoachingServices;

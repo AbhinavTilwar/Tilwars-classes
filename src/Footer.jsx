@@ -11,24 +11,24 @@ const CustomFooter = () => (
     <div className="footer-section">
       <div className="footer-item">
         <PhoneOutlined  className="contact-icon" style={{ fontSize: '24px', color: '#ffffff' }} />
-        <strong><div>+91 9619414885 / 9619414885</div></strong>
+        <strong><div>+91 8605408527 / 9307837735</div></strong>
         <div>Contact</div>
       </div>
       <div className="footer-item">
         <div className="contact-icon">
         <MailOutlined  style={{ fontSize: '24px', color: '#ffffff' }} />
         </div>
-        <strong><div>help@mahavastusantulan.com</div></strong>
+        <strong><div>codingbeyond@gmail.com</div></strong>
         <div>Mail</div>
       </div>
       <div className="footer-item">
         <EnvironmentOutlined  className="contact-icon" style={{ fontSize: '24px', color: '#ffffff' }} />
-        <strong><div>Sindhi Camp Chowk, Akola</div></strong>
+        <strong><div>89 Rajiv Nagar, Somalwada, Nagpur</div></strong>
         <div>Address</div>
       </div>
     </div>
     <div className="footer-bottom">
-  <div>© 2024 MahaVastu Santulan. All rights reserved.</div>
+  <div>© 2024 Tilwar's Coaching Classes. All rights reserved.</div>
   <div className="social-icons">
   <a href="/terms" style={{ margin: '0 10px' }}>Terms</a>
   <a href="/privacy" style={{ margin: '0 10px' }}>Privacy</a>

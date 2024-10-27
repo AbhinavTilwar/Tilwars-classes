@@ -149,8 +149,7 @@ const App = () => {
         ?
       </h3>
       <h3 className="home__subtitle">
-        Unlock Your Potential with Tailored Coaching Solutions for Academic Excellence.
-      </h3>
+      Empowering Young Minds from 1st to 12th – Building Bright Futures Together!"     </h3>
       <a href="/form" className="button-consult-mobile">
         <strong>Contact Us</strong>
       </a>
@@ -163,7 +162,7 @@ const App = () => {
                   <Intro/>
                   <ImageTileContainer />
 
-                  <CoFounders />
+                  {/* <CoFounders /> */}
                  
 
                   <Service />

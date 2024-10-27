@@ -8,20 +8,20 @@ import Founder3 from './assets/img/Rahul.png';
 const cofounders = [
   {
     name: "Devendra Padhen",
-    title: "Vastu Consultant, Architect",
-    // description: "Specializes in sustainable architecture and integrating Vastu principles.",
+    title: "Founder & Chief Educator",
+    description: "An expert in educational methodologies with a passion for mentoring students.",
     image: Founder2
   },
   {
     name: "Navin Gurbani",
-    title: "Vastu Consultant, Architect",
-    // description: "An expert in Vastu Shastra with over many years of experience in the field.",
+    title: "Co-Founder & Senior Instructor",
+    description: "Specializes in mathematics and science education, with years of experience in competitive coaching.",
     image: Founder1
   },
   {
     name: "Rahul Kasat",
-    title: "Vastu Consultant, Urban Designer",
-    // description: "Provides consultancy services to clients looking to improve their spaces through Vastu.",
+    title: "Co-Founder & Curriculum Developer",
+    description: "Responsible for developing our comprehensive curriculum that aligns with student needs and goals.",
     image: Founder3
   },
 ];
@@ -44,13 +44,11 @@ const CoFounders = () => {
   return (
     <div className='about-section'>
       <div className="cofounders-wrapper">
-      <h1>MEET OUR EXPERTS</h1>
-      <h2>Meet With Professionals.</h2>
-      <div className="fixed-width-text">
-  <p>Our team of expert Vastu consultants has years of experience in providing personalized Vastu solutions to individuals, businesses,
-    and industries. We use a combination of traditional Vastu principles and modern techniques to create a balanced and harmonious
-    environment that meets your specific needs.</p>
-</div>
+        <h1>MEET OUR EXPERTS</h1>
+        <h2>Meet With Professionals.</h2>
+        <div className="fixed-width-text">
+          <p>Our team of dedicated educators has years of experience in providing personalized coaching to students from classes 6 to 12. We combine effective teaching methods with a supportive environment to help each student achieve their academic goals.</p>
+        </div>
 
         {isMobile ? (
           <Carousel autoplay>

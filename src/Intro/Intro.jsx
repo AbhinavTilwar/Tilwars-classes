@@ -30,12 +30,10 @@ const AboutSection = () => {
           <div className="about-text">
             <h5 className="about-subtitle">ABOUT US</h5>
             <h2 className="about-title">
-              More than 10 Years we provide Vastu consultation service.
+              Guiding Students to Success for Over Two Decades
             </h2>
             <p className="about-description">
-              At MahaVastu Santulan, we believe that harmonious spaces lead to fulfilled lives. 
-              With a background in Architecture, Construction, and a passion for Vastu Shastra, 
-              we’re here to transform your surroundings into vibrant, positive energy zones.
+              At Tilwar's Coaching Classes, we are dedicated to helping students achieve academic success and personal growth. With over a decade of experience in education, we have built a supportive environment where learning is fun, engaging, and effective. Our expert faculty and personalized guidance ensure that each student is empowered to reach their full potential. Whether you're preparing for exams, strengthening foundational concepts, or developing critical thinking skills, Tilwar's Coaching Classes is your trusted partner in achieving academic excellence and confidence.
             </p>
           </div>
         </Col>

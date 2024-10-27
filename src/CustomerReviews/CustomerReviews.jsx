@@ -309,66 +309,60 @@
 import React, { useState, useEffect } from 'react';
 import './CustomerReviews.css';
 import { Divider } from 'antd';
-import Quotes from '../assets/img/quotes.png'
+import Quotes from '../assets/img/quotes.png';
 
 const defaultAvatarMale = 'https://cdn-icons-png.flaticon.com/512/4140/4140074.png';
 const defaultAvatarFemale = 'https://cdn-icons-png.flaticon.com/512/6833/6833605.png';
 
 const testimonials = [
   {
-    name: "Anjali Desai",
-    title: "Architect",
-    feedback: "As an architect, I understand the importance of harmony in space design. MahaVastu Santulan’s insights were invaluable in helping me create balanced and harmonious designs for my clients. I’ve seen nothing but positive feedback from my clients ever since!",
-    image: defaultAvatarFemale
-  },
-  {
-    name: "Rajeev Gupta",
-    title: "IT Professional",
-    feedback: "MahaVastu Santulan has completely transformed my business. The positive energy in my office is palpable, and I couldn’t be more grateful!",
+    name: "Ankit Sharma",
+    title: "Class 10 Student",
+    feedback: "Tilwar Coaching has really helped me strengthen my basics in math and science. I feel much more confident about my exams now!",
     image: defaultAvatarMale
   },
   {
-    name: "Neha Verma",
-    title: "Interior Designer",
-    feedback: "MahaVastu Santulan brought a new perspective to my work as an interior designer. Their recommendations helped me create spaces that not only look beautiful but also radiate positivity and balance. My clients love the results!",
+    name: "Riya Singh",
+    title: "Class 12 Student",
+    feedback: "The faculty here has made Physics so much easier to understand. I never thought I would enjoy the subject so much!",
+    image: defaultAvatarFemale
+  },
+  {
+    name: "Parent of Ayush Kumar",
+    title: "Class 8 Parent",
+    feedback: "I am very happy with the progress my son has made since joining Tilwar Coaching. His grades have improved significantly.",
     image: defaultAvatarMale
   },
   {
-    name: "Sandeep Malhotra",
-    title: "Business owner",
-    feedback: "I was struggling with business losses for years. After following MahaVastu Santulan’s advice, my business started thriving. Their Vastu solutions are practical and effective!",
+    name: "Sakshi Patel",
+    title: "Class 9 Student",
+    feedback: "The teachers explain concepts really well, and the study materials are excellent. I especially enjoy the weekly tests and practice sessions.",
     image: defaultAvatarFemale
   },
   {
-    name: "Meenal Joshi",
-    title: "Teacher",
-    feedback: "I had been facing a lot of stress and anxiety at home. After making the changes suggested by MahaVastu Santulan, there’s a noticeable calmness in our living space. It has had a profound impact on my mental well-being.",
+    name: "Priya Malhotra",
+    title: "Class 11 Student",
+    feedback: "Thanks to Tilwar Coaching, I am doing much better in chemistry. The personalized guidance has been really helpful!",
     image: defaultAvatarFemale
   },
   {
-    name: "Rakesh Mehra",
-    title: "Business owner",
-    feedback: "MahaVastu Santulan has completely transformed my business. After following their advice, I noticed an immediate increase in client engagement and overall growth. The positive energy in my office is palpable, and I couldn’t be more grateful!",
-    image: defaultAvatarFemale
+    name: "Parent of Arjun Mehta",
+    title: "Class 6 Parent",
+    feedback: "My son’s interest in studies has increased since he joined. The teachers are caring and supportive.",
+    image: defaultAvatarMale
   },
   {
-    name: "Rakesh Mehra",
-    title: "Business owner",
-    feedback: "MahaVastu Santulan has completely transformed my business. After following their advice, I noticed an immediate increase in client engagement and overall growth. The positive energy in my office is palpable, and I couldn’t be more grateful!",
-    image: defaultAvatarFemale
+    name: "Rahul Desai",
+    title: "Class 7 Student",
+    feedback: "I like how the teachers explain even the tough topics clearly. I feel more prepared for my exams.",
+    image: defaultAvatarMale
   },
   {
-    name: "Priya Sharma",
-    title: "Homemaker",
-    feedback: "I was facing constant health issues and disharmony in my family. After MahaVastu Santulan’s consultation, everything has changed for the better. Our home now feels peaceful, and the health problems have reduced drastically. Highly recommend their services!",
+    name: "Sneha Kapoor",
+    title: "Class 12 Student",
+    feedback: "The coaching for competitive exams alongside school syllabus has been fantastic. I feel ready for the boards and entrance tests!",
     image: defaultAvatarFemale
-  },  
-  {
-    name: "Amit Sinha",
-    title: "Real Estate Developer",
-    feedback: "I consulted MahaVastu Santulan for one of my residential projects, and the results were incredible. The project sold out quicker than expected, and I believe it’s all thanks to the Vastu corrections they suggested. Will definitely seek their guidance for future projects!",
-    image: defaultAvatarFemale
-  },
+  }
 ];
 
 const Testimonial = () => {
@@ -405,7 +399,7 @@ const Testimonial = () => {
   return (
     <div className="testimonial-container">
       <h1>TESTIMONIALS</h1>
-      <h2>Our Clients Feedback.</h2>
+      <h2>Our Students & Parents Speak</h2>
 
       {/* Display multiple testimonials */}
       <div className="testimonial-cards-wrapper">
@@ -419,7 +413,7 @@ const Testimonial = () => {
             <div className="testimonial-content">
               <div>{testimonial.feedback}</div>
             </div>
-            <Divider style={{  borderWidth: '2px' }} />
+            <Divider style={{ borderWidth: '2px' }} />
             <div className="testimonial-author">
               <img src={testimonial.image} alt={testimonial.name} className="author-image" />
               <div>
