@@ -1,0 +1,23 @@
+
+  /* Show logo1 on mobile */
+  .logo-mobile {
+    display: block;
+  }
+  
+  .logo-desktop {
+    display: none;
+  }
+  
+  /* Show logo2 on desktop (min-width: 768px as an example) */
+  @media (min-width: 768px) {
+    .logo-mobile {
+      display: none;
+    }
+  
+    .logo-desktop {
+      display: block;
+      width: 50%;
+      height: 100%;
+    }
+  }
+  

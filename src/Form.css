@@ -1,0 +1,73 @@
+.input-wrapper {
+    position: relative;
+    margin-bottom: 30px;
+  }
+  
+  .input-field {
+    display: block;
+    width: 100%;
+    padding: 8px 12px; /* px-2 py-1 in Tailwind */
+    color: #1a202c; /* text-gray-900 in Tailwind */
+    background-color: transparent; /* bg-transparent in Tailwind */
+    border: none; /* Remove all borders */
+    border-bottom: 2px solid #d1d5db; /* border-gray-300 in Tailwind */
+    outline: none; /* focus:outline-none in Tailwind */
+    transition: border-color 0.3s ease; /* smooth transition */
+  }
+  
+  
+  .input-field:focus {
+    border-bottom-color: #3b82f6; /* focus:border-blue-500 in Tailwind */
+  }
+  
+  .input-label {
+    position: absolute;
+    left: 12px;
+    top: 3px;
+    color: #9ca3af; /* text-gray-600 in Tailwind */
+    transition: all 0.3s ease;
+    pointer-events: none;
+  }
+  
+  .input-field:focus + .input-label,
+  .input-field:not(:placeholder-shown) + .input-label {
+    transform: translateY(-24px);
+    font-size: 12px;
+    color: #4CAF50;
+  }
+  
+  .input-focused {
+    transform: translateY(-24px);
+    font-size: 12px;
+    color: #4CAF50;
+  }
+  
+  .image-container {
+    margin-top: 10%;
+    width: 98%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px; /* Space between images and form */
+  }
+  
+  .animated-image {
+    width: 180px; /* Set your preferred width */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .center-image {
+    width: 120px; /* Set your preferred width */
+    height: auto; /* Maintain aspect ratio */  
+    margin: 0 auto; /* Center the middle image */
+  }
+  @media (max-width: 768px) {
+    .animated-image {
+        width: 100px; /* Set your preferred width */
+        height: auto; /* Maintain aspect ratio */
+      }
+      .center-image {
+       
+        margin: 0 auto; /* Center the middle image */
+      }
+  }

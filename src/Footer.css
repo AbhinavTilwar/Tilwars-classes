@@ -1,0 +1,114 @@
+.footer {
+  text-align: center;
+  background-color: #ffffff;
+  padding: 20px 0;
+}
+
+.footer-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.footer-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
+
+.footer-item div {
+  margin-top: 8px;
+}
+
+.social-icons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-icons a {
+  margin-right: 16px;
+  color: black;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 20px;
+  border-top: 1px solid #f0f0f0;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.footer-bottom div {
+  margin: 8px;
+}
+
+.contact-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #d12336;
+  color: white;
+  font-size: 24px;
+}
+.contact-icon-mini {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #d12336;
+  color: white;
+
+  width: 30px; /* Smaller icon */
+  height: 30px;
+}
+/* Media Query for Mobile Screens */
+@media (max-width: 768px) {
+  .footer-section {
+    flex-direction: column; /* Stack items vertically */
+  }
+
+  .footer-item {
+    margin: 5px 0; /* Reduce margin for mobile */
+  }
+
+  .footer-item div {
+    font-size: 14px; /* Smaller text size */
+  }
+
+  .contact-icon {
+    width: 40px; /* Smaller icon */
+    height: 40px;
+    font-size: 18px; /* Smaller icon font size */
+  }
+  .contact-icon-mini {
+    width: 30px; /* Smaller icon */
+    height: 30px;
+  }
+
+  .social-icons a {
+    font-size: 18px; /* Reduce icon size */
+    margin-right: 10px;
+  }
+
+  .footer-bottom {
+    flex-direction: column; /* Stack bottom elements */
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .footer-bottom div {
+    margin: 5px 0; /* Reduce margins */
+  }
+}

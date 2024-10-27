@@ -1,0 +1,62 @@
+/* WhyChooseUs.css */
+
+/* General Section Styling */
+.why-choose-us {
+  padding: 3rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Grid layout for the containers */
+.why-choose-us__containers {
+  margin-top: 3%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+/* Individual content blocks */
+.why-choose-us__content {
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Icon styling */
+.why-choose-us__icon {
+  font-size: 3rem;
+  color: #ffc107;
+  margin-bottom: 1rem;
+}
+
+/* Headings and details */
+.why-choose-us__name {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.why-choose-us__detail {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Animation for when section comes into view */
+.why-choose-us__content.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.why-choose-us h1 {
+  text-align: center; /* Centers the text horizontally */
+  margin-bottom: 2rem; /* Adjust spacing below the heading */
+}

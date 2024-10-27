@@ -1,0 +1,100 @@
+.about-section {
+    padding: 150px 20px; /* Reduced side padding for mobile */
+    background-color: #fff;
+  }
+  
+  .containerr {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    background-color: white; /* Keep the body background color white */
+  }
+  
+  h1 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: black;
+  }
+  
+  p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: black;
+  }
+  
+  .services {
+    padding-top: 2%;
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping to the next line */
+    justify-content: center; /* Center the items */
+    gap: 5%; /* Add gap between service cards */
+  }
+  
+  .service {
+margin-top: 1%;
+    flex: 0 0 45%; /* Set each service to take up about 45% of the row */
+    text-align: left; /* Align text to the left */
+    padding: 10px; /* Add padding inside the service card */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    box-shadow: none; /* Remove shadow if you have any */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for animation */
+  }
+  
+  .service:hover {
+    transform: translateY(-5px); /* Lift the card on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
+  }
+  
+  .service img {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Optional: Add rounded corners to images */
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+    margin: 15px 0;
+    color: black;
+  }
+  
+  /* Media Queries for Mobile View */
+  @media (max-width: 768px) {
+    .about-section {
+      padding: 100px 20px; /* Adjust padding for smaller screens */
+
+    }
+    .containerr {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: left;
+      background-color: white; /* Keep the body background color white */
+    }
+    
+  
+    .service {
+      flex: 0 0 100%; /* Each service takes full width on small screens */
+      margin: 5px 0; /* Reduce margin between services */
+    }
+  
+    h1 {
+
+      font-size: 1.2rem; /* Smaller heading size for mobile */
+    }
+  
+    h2 {
+      font-size: 1.5rem; /* Smaller subheading size for mobile */
+    }
+  
+    p {
+
+      font-size: 0.9rem; /* Smaller paragraph size for mobile */
+    }
+  }
+  
