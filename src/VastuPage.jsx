@@ -1,7 +1,7 @@
 import React from 'react';
 import './VastuPage.css'; // Ensure you create this CSS file for styling
-import GIF from './assets/img/Main.gif'
-import Vastu from './assets/img/vastu1.jpg'
+import GIF from './assets/img/classPage.svg'
+import Vastu from './assets/img/PIC1.svg'
 import FAQ from './FAQ/faq'; // Adjust the import path accordingly
 
 const VastuPage = () => {
@@ -19,14 +19,14 @@ const VastuPage = () => {
                     clipPath: 'inset(0 0 10% 0)'
                   }}
                 />
-        <h1>Vastu Shastra</h1>
+        <h1>Tilwar's Coaching Classes</h1>
       </header>
       <section className="vastu-content">
         <p>
-          Vastu Shastra is an ancient Indian architectural science that emphasizes the importance of harmonious living spaces. Rooted in the principles of energy flow, Vastu aims to create environments that foster health, happiness, and prosperity. By aligning your home or workspace with natural elements, you can enhance your overall well-being and success.
+        At Tilwar Coaching Classes, we provide comprehensive coaching for students from 1st to 12th grade. Our experienced educators are dedicated to nurturing young minds and guiding them towards academic excellence.
         </p>
         <p>
-          The practice of Vastu involves strategic placement of rooms, furniture, and decor to optimize the energy in your environment. From the direction of your entrance to the positioning of your furniture, every aspect plays a vital role in creating a balanced space that nurtures your life.
+        We focus on individualized learning, ensuring that each student receives personalized attention and resources tailored to their unique needs. Our curriculum is designed to build a strong foundation in core subjects while encouraging critical thinking and problem-solving skills.
         </p>
       </section>
       <footer className="vastu-footer">
@@ -38,7 +38,7 @@ const VastuPage = () => {
         />
         <footer>
         <p className="vastu-fact">
-          Did you know? A well-structured Vastu-compliant home can significantly enhance the prosperity and well-being of its inhabitants.
+        Did you know? Students who engage in regular tutoring sessions typically see a significant improvement in their grades and confidence.
         </p>
         <p></p>
         </footer>

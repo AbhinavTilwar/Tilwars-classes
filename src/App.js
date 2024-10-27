@@ -23,7 +23,7 @@ import heroImage from './assets/img/hero_logo.svg'
 import Intro from './Intro/Intro'
 import FAQ from './FAQ/faq';
 import IntroGIF from './assets/img/FiveElement.gif';
-
+import Dashboard from './StudentsList'
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [darkMode, setDarkMode] = useState(false);
@@ -103,10 +103,23 @@ const App = () => {
   const contactContent = (
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
       <Tooltip title="Chat with us">
-      <Button type="primary" shape="circle" icon={<WhatsAppOutlined />} style={{ marginBottom: '10px', backgroundColor: '#25D366', borderColor: '#25D366' }} />      </Tooltip>
-      <Tooltip title="Call us">
-        <Button type="primary" shape="circle" icon={<PhoneOutlined />} />
-      </Tooltip>
+      <Button 
+        href="https://wa.me/918605408527"  // Add your phone number here in the format 91 + number
+        target="_blank" 
+        type="primary" 
+        shape="circle" 
+        icon={<WhatsAppOutlined />} 
+        style={{ marginBottom: '10px', backgroundColor: '#25D366', borderColor: '#25D366' }} 
+      />
+    </Tooltip>
+    <Tooltip title="Call us">
+      <Button 
+        href="tel:+918605408527"  // Add your phone number here in the format +91 + number
+        type="primary" 
+        shape="circle" 
+        icon={<PhoneOutlined />} 
+      />
+    </Tooltip>
     </div>
   );
 
@@ -149,7 +162,7 @@ const App = () => {
         ?
       </h3>
       <h3 className="home__subtitle">
-      Empowering Young Minds from 1st to 12th – Building Bright Futures Together!"     </h3>
+      Empowering Young Minds from <strong>1st to 12th </strong>– Building Bright Futures Together!"     </h3>
       <a href="/form" className="button-consult-mobile">
         <strong>Contact Us</strong>
       </a>
@@ -181,8 +194,8 @@ const App = () => {
             />
             <Route path="/contact" element={<ContactUs />} />
             <Route path="/form" element={<VastuForm />} />
-            <Route path="/Vastu" element={<VastuPage />} />
-            { <Route path="/ConsultationsList" element={<ConsultationsList />} /> }
+            <Route path="/AboutUs" element={<VastuPage />} />
+            { <Route path="/dashboard" element={<Dashboard />} /> }
 
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>

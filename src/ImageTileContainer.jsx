@@ -48,10 +48,10 @@
 // export default ImageTileContainer;
 import React from 'react';
 import './ImageTileContainer.css'; // Import CSS for styles
-import ExamPrep from './assets/img/PIC5.svg';
-import ConceptBuilding from './assets/img/PIC2.svg';
-import SkillDevelopment from './assets/img/PIC3.svg';
-import OnlineClasses from './assets/img/PIC1.svg';
+import ExamPrep from './assets/img/PIC3.svg';
+import ConceptBuilding from './assets/img/PIC5.svg';
+import SkillDevelopment from './assets/img/PIC1.svg';
+import OnlineClasses from './assets/img/PIC2.svg';
 
 const CoachingServices = () => {
   return (

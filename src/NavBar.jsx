@@ -76,15 +76,20 @@ const NavBar = ({ darkMode, setDarkMode }) => {
               <Link to="/" className="nav__link active-link" onClick={closeMenu}>Home</Link>
             </li>
             <li className="nav__item">
-              <Link to="/vastu" className="nav__link" onClick={closeMenu}>Blogs</Link>
+              <Link to="/AboutUs" className="nav__link" onClick={closeMenu}>About Us</Link>
             </li>
             {/* <li className="nav__item">
               <Link to="/form" className="nav__link" onClick={closeMenu}>Consultation</Link>
             </li> */}
             <li className="nav__item">
-              <Button type="primary" style={{ backgroundColor: 'transparent', borderColor: 'white', color: 'white' }}>
-                Contact us
-              </Button>
+            <Button 
+  href="https://maps.app.goo.gl/kvupDYkW9yq3Xdcq7" 
+  type="primary" 
+  style={{ backgroundColor: 'transparent', borderColor: 'white', color: 'white' }}
+> 
+  Contact us
+</Button>
+
             </li>
             {/* <li className="nav__item theme-switcher-container">
               <div className="theme-switcher">

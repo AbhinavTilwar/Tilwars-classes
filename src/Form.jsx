@@ -4,15 +4,15 @@ import { motion } from 'framer-motion';
 import { db } from './firebase'; // Import Firestore
 import { collection, addDoc } from 'firebase/firestore'; // Firestore methods
 import './Form.css'; // Add external CSS for input styling
-import img1 from './assets/img/ele1.png';
-import img2 from './assets/img/ele2.png';
+import img1 from './assets/img/ele1.svg';
+import img2 from './assets/img/ele2.svg';
 import img3 from './assets/img/icon.png';
 import { SendOutlined } from '@ant-design/icons';
 import ImageTileContainer from './ImageTileContainer-form';
 
 const { Option } = Select;
 
-const VastuForm = () => {
+const CoachingForm = () => {
   const [form] = Form.useForm();
   const [isMobile, setIsMobile] = useState(false);
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -36,17 +36,18 @@ const VastuForm = () => {
   }, []);
 
   const tiles = [
-    // your tile data here
+    // Your tile data here
   ];
 
   const handleSubmit = async (values) => {
     try {
       // Save form data to Firestore
-      const docRef = await addDoc(collection(db, 'consultations'), {
+      const docRef = await addDoc(collection(db, 'students'), {
         name: values.name,
         phone: values.phone,
         email: values.email,
-        service: values.service,
+        grade: values.grade,
+        subject: values.subject,
         createdAt: new Date(),
       });
   
@@ -69,13 +70,9 @@ const VastuForm = () => {
   return (
     <section>
 
-<div
-  style={{
-    marginTop: '60px', // Adjust this value based on your NavBar's height
-  }}
-></div>
+      <div style={{ marginTop: '60px' }}></div>
 
-<div className="image-container">
+      <div className="image-container">
         <motion.img
           src={img1}
           alt="Image 1"
@@ -92,128 +89,91 @@ const VastuForm = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.3 }}
         />
-          <motion.img
+        <motion.img
           src={img2}
-          alt="Image 1"
+          alt="Image 2"
           className="animated-image left-image"
           initial={{ x: '-100%', opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.5 }}
         />
       </div>
-      {/* Your existing form layout and images */}
-      <div
-        style={{
-          maxWidth: '600px',
-          margin: '0 auto',
-          padding: '20px',
-        }}
-      >
+
+      <div style={{ maxWidth: '600px', margin: '0 auto', padding: '20px' }}>
         <h2 style={{ textAlign: 'center', marginBottom: '20px' }}>
-          Get Vastu Consultation
+          Enroll at Tilwar Coaching Classes
         </h2>
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-         <Form
-  form={form}
-  layout="vertical"
-  onFinish={handleSubmit}
-  initialValues={{ service: 'home' }}
->
-  {/* Full Name Input */}
-  <Form.Item
-    label="Full Name"
-    name="name"
-    rules={[{ required: true, message: 'Please enter your full name' }]}
-  >
-    <Input placeholder="Enter your full name"
-    onFocus={() => setInputFocus({ ...inputFocus, phone: true })}
-    onBlur={() => setInputFocus({ ...inputFocus, phone: false })}
-    className={`input-field ${inputFocus.phone ? 'focused' : ''}`} />
-  </Form.Item>
+        <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
+          <Form
+            form={form}
+            layout="vertical"
+            onFinish={handleSubmit}
+            initialValues={{ grade: '1' }}
+          >
+            {/* Full Name Input */}
+            <Form.Item label="Full Name" name="name" rules={[{ required: true, message: 'Please enter your full name' }]}>
+              <Input placeholder="Enter your full name" />
+            </Form.Item>
 
-  {/* Phone Number Input */}
-  <Form.Item
-  label="Phone Number"
-  name="phone"
-  rules={[{ required: true, message: 'Please enter your phone number' }]}
->
-  <Input
-    placeholder="Enter your phone number"
-    onFocus={() => setInputFocus({ ...inputFocus, phone: true })}
-    onBlur={() => setInputFocus({ ...inputFocus, phone: false })}
-    className={`input-field ${inputFocus.phone ? 'focused' : ''}`}
-  />
-</Form.Item>
+            {/* Phone Number Input */}
+            <Form.Item label="Phone Number" name="phone" rules={[{ required: true, message: 'Please enter your phone number' }]}>
+              <Input placeholder="Enter your phone number" />
+            </Form.Item>
 
+            {/* Email Input */}
+            <Form.Item
+              label="Email Address"
+              name="email"
+              rules={[
+                { required: true, message: 'Please enter your email' },
+                { type: 'email', message: 'Please enter a valid email address' },
+              ]}
+            >
+              <Input placeholder="Enter your email" />
+            </Form.Item>
 
-  {/* Email Input */}
-  <Form.Item
-    label="Email Address"
-    name="email"
-    rules={[
-      { required: true, message: 'Please enter your email' },
-      { type: 'email', message: 'Please enter a valid email address' },
-    ]}
-  >
-    <Input placeholder="Enter your email"
-    onFocus={() => setInputFocus({ ...inputFocus, phone: true })}
-    onBlur={() => setInputFocus({ ...inputFocus, phone: false })}
-    className={`input-field ${inputFocus.phone ? 'focused' : ''}`}
-     />
-  </Form.Item>
+            {/* Class Selection */}
+            <Form.Item label="Grade" name="grade" rules={[{ required: true, message: 'Please select your grade' }]}>
+              <Select placeholder="Select your grade">
+                {Array.from({ length: 12 }, (_, i) => (
+                  <Option key={i + 1} value={(i + 1).toString()}>{`Class ${i + 1}`}</Option>
+                ))}
+              </Select>
+            </Form.Item>
 
-  {/* Vastu Service Select */}
-  <Form.Item
-    label="Vastu Service"
-    name="service"
-    rules={[{ required: true, message: 'Please select a Vastu service' }]}
-  >
-    <Select placeholder="Select a service">
-      <Option value="house-check">Vastu Check For House</Option>
-      <Option value="house-evaluation">Detailed Vastu Evaluation For House</Option>
-      <Option value="plot-selection">Vastu For Plot Selection</Option>
-      <Option value="plot-solution">Vastu Solution for Plot</Option>
-      <Option value="office-check">Vastu Check For Office & Commercial Places</Option>
-      <Option value="office-planning">Vastu Planning for Office & Commercial Places</Option>
-      <Option value="office-evaluation">Detailed Vastu Evaluation For Office & Commercial Places</Option>
-      <Option value="factory-vastu">Vastu For Factory</Option>
-      <Option value="factory-evaluation">Detailed Vastu Evaluation For Factory</Option>
-      <Option value="factory-planning">Vastu Planning & Design For Factory</Option>
-      <Option value="flat-check">Vastu Check For Flat Selection</Option>
-      <Option value="flat-evaluation">Detailed Vastu Evaluation For Flat / Apartments</Option>
-      <Option value="flat-planning">Vastu Planning and Design</Option>
-      <Option value="astro-vastu">Astro Vastu Consultancy</Option>
-      <Option value="numerology">Numerology Consultation</Option>
-      <Option value="astrology">Personal Astrology & Horoscope Consultation</Option>
-      <Option value="other">Other</Option>
-    </Select>
-  </Form.Item>
+            {/* Subject Selection */}
+            <Form.Item label="Subject" name="subject" rules={[{ required: true, message: 'Please select a subject' }]}>
+              <Select placeholder="Select a subject">
+                <Option value="mathematics">Mathematics</Option>
+                <Option value="science">Science</Option>
+                <Option value="english">English</Option>
+                <Option value="social-studies">Social Studies</Option>
+                <Option value="All Subjects">Languages</Option>
+                <Option value="others">Other</Option>
+              </Select>
+            </Form.Item>
 
-  <Form.Item>
-    <Button type="primary" htmlType="submit" block icon={<SendOutlined/>}
-    style={{
-      backgroundColor: '#d12336',
-      borderColor: '#ffffff',
-      borderRadius: '5px',
-      transition: '0.3s',
-    }}
-    onMouseEnter={(e) => {
-      e.target.style.backgroundColor = '#FFC107';
-      e.target.style.transform = 'scale(1.05)';
-    }}
-    onMouseLeave={(e) => {
-      e.target.style.backgroundColor = '#d12336';
-      e.target.style.transform = 'scale(1)';
-    }}>
-      Submit
-    </Button>
-  </Form.Item>
-</Form>
-
+            <Form.Item>
+              <Button type="primary" htmlType="submit" block icon={<SendOutlined />}
+                style={{
+                  backgroundColor: '#4a80f5',
+                  borderColor: '#ffffff',
+                  borderRadius: '5px',
+                  transition: '0.3s',
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.backgroundColor = '#FFC107';
+                  e.target.style.transform = 'scale(1.05)';
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.backgroundColor = '#d12336';
+                  e.target.style.transform = 'scale(1)';
+                }}
+              >
+                Submit
+              </Button>
+            </Form.Item>
+          </Form>
         </motion.div>
 
         {/* Modal for submission success */}
@@ -223,7 +183,7 @@ const VastuForm = () => {
           onOk={handleModalOk}
           onCancel={handleModalCancel}
         >
-          <p>Thank you for your submission! We will get back to you shortly.</p>
+          <p>Thank you for enrolling! We will contact you shortly with further details.</p>
         </Modal>
       </div>
 
@@ -234,4 +194,4 @@ const VastuForm = () => {
   );
 };
 
-export default VastuForm;
+export default CoachingForm;
